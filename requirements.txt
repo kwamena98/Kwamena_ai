@@ -1,7 +1,6 @@
 Flask==1.1.2
-absl_py==0.12.0
 numpy==1.19.5
 tensorflow==2.5.0
 nltk==3.4.5
-absl==0.0
+absl-py==0.12.0
 translate==3.5.0
