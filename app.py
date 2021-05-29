@@ -38,7 +38,7 @@ intents= json.loads(open("intents.json").read())
 words=pickle.load(open('words.pkl','rb'))
 classes=pickle.load(open('classes.pkl','rb'))
 
-model=load_model('/home/kwamena/AI_CHATBOT/chat_bot.model')
+model=load_model('chat_bot.model')
 
 
 def clean_up_sentence(sentence):
