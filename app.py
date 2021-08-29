@@ -13,8 +13,6 @@ import numpy as np
 import json 
 import pickle
 import nltk
-
-
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras import models
 from tensorflow.keras import optimizers
@@ -29,7 +27,7 @@ from tensorflow.keras.models import load_model
 
 
 
-app=Flask(__name__)
+
 
 lemmatizer=WordNetLemmatizer()
 
@@ -38,7 +36,7 @@ intents= json.loads(open("intents.json").read())
 words=pickle.load(open('words.pkl','rb'))
 classes=pickle.load(open('classes.pkl','rb'))
 
-model=load_model('/home/kwamena/AI_CHATBOT/chat_bot.model')
+model=load_model('chat_bot.model')
 
 
 def clean_up_sentence(sentence):
@@ -87,9 +85,7 @@ def get_response(intents_list,intents_json):
     return result
 
 
-
-
-
+app=Flask(__name__)
 @app.route("/")
 @app.route("/messaging",methods=['GET','POST'])
 def message():
@@ -97,7 +93,7 @@ def message():
 
     if request.method == 'POST':
         message = request.json["message"]
-        print(message)
+
 
         # print(message)
         ints=predict_class(message)
