@@ -57,8 +57,8 @@
          "context": [""]
         },
         {"tag": "insults",
-                "patterns": ["fuck you", "stupid", "dick","f**k you"],
-                "responses": ["Hi, Please mind your langugage", "Don't worry You can insult me and I don't care", "Thanks for The insults"],
+                "patterns": ["fuck you", "stupid", "dick head","f**k you"],
+                "responses": ["Hi, Please mind your langugage"],
                 "context": [""]
                }
         
